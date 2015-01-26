@@ -16,6 +16,9 @@
         &:first-child{
             border-left: 1px solid #fff;
         }
+        &.close{
+            display: none;
+        }
         >a{
             display: block;
             height: 50px;
@@ -24,6 +27,24 @@
             color: #fff;
             background: #333;
             text-align: center;
+        }
+    }
+
+    @include small{
+        display: none;
+        .nav-inner{
+            display: block;
+        }
+        .nav-item {
+            display: block;
+            width: 100%;
+            border: 0;
+            &.close{
+                display: block;
+            }
+            >a{
+                border-bottom: #fff 1px solid;
+            }
         }
     }
 }

@@ -3,7 +3,10 @@
     width: 770px;
     background: #eee;
     padding: 15px;
-    @include under_middle{
+}
+
+@include under_middle{
+    .main {
         float: static;
         width: 100%;
     }

@@ -59,3 +59,41 @@ type
         }
     }
 }
+
+@include small{
+    .media{
+        &-image {
+            width: 100px;
+            height: auto;
+        }
+        &-link {
+            padding: 10px 0 10px 10px;
+        }
+        &-body{
+            margin-left: 100px;
+            padding: 0 10px 10px 10px;
+        }
+        &-heading {
+            font-size: 14px;
+        }
+        &-text{
+            display: none;
+        }
+
+        &.small{
+            .media-image{
+                display: none;
+            }
+            .media-body{
+                margin: 0;
+            }
+            .media-heading {
+                font-size: 12px;
+            }
+            .media-text{
+                display: block;
+                font-size: 10px;
+            }
+        }
+    }
+}

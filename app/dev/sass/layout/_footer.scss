@@ -1,0 +1,15 @@
+.footer {
+    width: 100%;
+    &-inner {
+        width: $size_max;
+        height: 80px;
+        margin: 0 auto;
+        background: #eee;
+        text-align: center;
+        > small {
+            display: inline-block;
+            height: 80px;
+            line-height: 80px;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.page-archive {
+    
+    .heading-primary{
+        margin-bottom: 30px;
+    }
+
+    .archive-list {
+        > li {
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .archive-side-list{
+        > li{
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .heading-secondary{
+        margin-bottom: 15px;
+    }
+}

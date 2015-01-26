@@ -1,0 +1,29 @@
+.nav{
+    width: 100%;
+    background: #333;
+    &-inner {
+        width: 100%;
+        max-width: $size_max;
+        margin: 0 auto;
+        @extend %clearfix;
+        display: table;
+    }
+    &-item{
+        display: table-cell;
+        width: 20%;
+        height: 50px;
+        border-right: #fff 1px solid;
+        &:first-child{
+            border-left: 1px solid #fff;
+        }
+        >a{
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            text-decoration: none;
+            color: #fff;
+            background: #333;
+            text-align: center;
+        }
+    }
+}

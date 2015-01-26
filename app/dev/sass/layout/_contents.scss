@@ -3,7 +3,8 @@
     margin: 30px 0;
 }
 .contents-inner{
-    width: $size_max; //setting.scssに記述
+    width: 100%;
+    max-width: $size_max;
     margin: 0 auto;
     @extend %clearfix;
 }

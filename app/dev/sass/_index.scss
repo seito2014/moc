@@ -1,7 +1,34 @@
-.index{
-    transform: opacify 0.5s;
-    font-size: 1.2rem;
-    text-align: left;
+.page-index {
+
+    .heading-primary{
+        margin-bottom: 30px;
+    }
+
+    .heading-secondary{
+        margin-bottom: 8px;
+    }
+
+    .archive-list {
+        > li {
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .archive-side-list {
+        > li {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .info{
+        padding-top: 30px;
+    }
 }
 
 .main-visual{

@@ -4,15 +4,63 @@
             <!-- start contents -->
             <div class="main-visual">
                 <div class="main-visual-inner">
-                    <img src="http://placehold.it/980x520" height="520" width="980" alt="">
+                    <img src="http://placehold.it/1100x420" height="420" width="1100" alt="">
                 </div>
             </div>
 
             <!-- start contents -->
             <div class="contents">
                 <div class="contents-inner">
-                    <div class="main"></div>
-                    <aside class="side"></aside>
+                    <div class="main">
+                        <h1 class="heading-primary">新着記事一覧</h1>
+
+                        <ul class="archive-list">
+                            <% for(var i=0; i < 5; i++) {%>
+                            <li>
+                                <article class="media">
+                                    <a href="#" class="media-link">
+                                        <img src="http://placehold.it/160x120" height="120" width="160" alt="" class="media-image">
+                                        <div class="media-body">
+                                            <h2 class="media-heading">記事タイトルサンプル記事タイトルサンプル記事タイトルサンプル</h2>
+                                            <p class="media-text">sample text sample text sample text sample text sample text sample text sample text sample text sample text</p>
+                                        </div>
+                                    </a>
+                                </article>
+                            </li>
+                            <% } %>
+                        </ul>
+                    </div>
+                    <aside class="side">
+
+                        <h2 class="heading-secondary">おすすめ記事一覧</h2>
+
+                        <ul class="archive-side-list">
+                            <% for(var i=0; i < 5; i++) {%>
+                            <li>
+                                <article class="media small">
+                                    <a href="#" class="media-link">
+                                        <img src="http://placehold.it/80x60" height="60" width="80" alt="" class="media-image">
+                                        <div class="media-body">
+                                            <h2 class="media-heading">記事タイトルサンプル</h2>
+                                            <p class="media-text">記事本文サンプルテキスト記事本文サンプルテキスト</p>
+                                        </div>
+                                    </a>
+                                </article>
+                            </li>
+                            <% } %>
+                        </ul>
+                        <a href="#" class="button button-default">
+                            もっと見る
+                        </a>
+                    </aside>
+                </div>
+
+                <div class="contents-inner">
+                    <aside class="info">
+                        <a href="#" target="_blank">
+                            <img src="http://placehold.it/1100x200" height="200" width="1100" alt="">
+                        </a>
+                    </aside>
                 </div>
             </div>
             <!-- end contents -->

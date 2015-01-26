@@ -12,6 +12,7 @@
 * layout
 */
 @import "layout/header";
+@import "layout/nav";
 @import "layout/footer";
 @import "layout/contents";
 @import "layout/main";
@@ -23,7 +24,7 @@
 @import "module/button";
 @import "module/heading";
 @import "module/list";
-
+@import "module/info";
 @import "module/media";
 
 /*

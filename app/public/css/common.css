@@ -1,12 +1,12 @@
 /*
 * base
 */
-.header-inner, .contents-inner, .media-link {
+.header-inner, .nav-inner, .contents-inner, .media-link {
   zoom: 1; }
-  .header-inner:before, .contents-inner:before, .media-link:before, .header-inner:after, .contents-inner:after, .media-link:after {
+  .header-inner:before, .nav-inner:before, .contents-inner:before, .media-link:before, .header-inner:after, .nav-inner:after, .contents-inner:after, .media-link:after {
     content: "";
     display: block; }
-  .header-inner:after, .contents-inner:after, .media-link:after {
+  .header-inner:after, .nav-inner:after, .contents-inner:after, .media-link:after {
     clear: both; }
 
 body {
@@ -462,17 +462,25 @@ body {
 * layout
 */
 .header {
-  width: 100%; }
+  width: 100%;
+  background: #eee; }
   .header-inner {
-    width: 980px;
+    width: 100%;
+    max-width: 1100px;
     height: 80px;
     margin: 0 auto;
-    background: #eee;
-    padding: 10px; }
+    padding: 10px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff; }
   .header-logo {
     float: left;
     width: 200px;
     height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
     background: #fff; }
   .header-module {
     float: right;
@@ -481,40 +489,70 @@ body {
     background: #fff;
     margin-left: 10px; }
 
-.footer {
-  width: 100%; }
-  .footer-inner {
-    width: 980px;
-    height: 80px;
+.nav {
+  width: 100%;
+  background: #333; }
+  .nav-inner {
+    width: 100%;
+    max-width: 1100px;
     margin: 0 auto;
-    background: #eee;
-    text-align: center; }
+    display: table; }
+  .nav-item {
+    display: table-cell;
+    width: 20%;
+    height: 50px;
+    border-right: #fff 1px solid; }
+    .nav-item:first-child {
+      border-left: 1px solid #fff; }
+    .nav-item > a {
+      display: block;
+      height: 50px;
+      line-height: 50px;
+      text-decoration: none;
+      color: #fff;
+      background: #333;
+      text-align: center; }
+
+.footer {
+  width: 100%;
+  background: #333; }
+  .footer-inner {
+    width: 100%;
+    max-width: 1100px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff; }
     .footer-inner > small {
       display: inline-block;
-      height: 80px;
-      line-height: 80px; }
+      height: 40px;
+      line-height: 40px;
+      color: #fff; }
 
 .contents {
   width: 100%;
   margin: 30px 0; }
 
 .contents-inner {
-  width: 980px;
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto; }
 
 .main {
   float: left;
   width: 70%;
   background: #eee;
-  min-height: 600px;
   padding: 15px; }
 
 .side {
   float: right;
   width: 27%;
   background: #eee;
-  min-height: 600px;
   padding: 15px; }
+  .side .button-default {
+    margin-top: 15px;
+    width: 100%; }
 
 /*
 * module
@@ -588,6 +626,10 @@ radius
 
 .button-warning {
   background: #F6D158;
+  color: #fff; }
+
+.button-default {
+  background: #333;
   color: #fff; }
 
 /*
@@ -733,6 +775,12 @@ list-number
     .list-number > li:last-child {
       margin-bottom: 0; }
 
+.info > a {
+  width: 100%; }
+  .info > a > img {
+    width: 100%;
+    height: auto; }
+
 /*
 #overview
 media
@@ -779,20 +827,27 @@ type
 /*
 * pages
 */
-.index {
-  -webkit-transform: opacify 0.5s;
-      -ms-transform: opacify 0.5s;
-          transform: opacify 0.5s;
-  font-size: 12px;
-  font-size: 1.2rem;
-  text-align: left; }
+.page-index .heading-primary {
+  margin-bottom: 30px; }
+.page-index .heading-secondary {
+  margin-bottom: 8px; }
+.page-index .archive-list > li {
+  margin-bottom: 15px; }
+  .page-index .archive-list > li:last-child {
+    margin-bottom: 0; }
+.page-index .archive-side-list > li {
+  margin-bottom: 10px; }
+  .page-index .archive-side-list > li:last-child {
+    margin-bottom: 0; }
+.page-index .info {
+  padding-top: 30px; }
 
 .main-visual {
   width: 100%;
   margin-top: 30px; }
 
 .main-visual-inner {
-  width: 980px;
+  width: 1100px;
   margin: 0 auto; }
   .main-visual-inner > img {
     width: 100%;

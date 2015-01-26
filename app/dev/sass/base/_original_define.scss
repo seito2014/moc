@@ -1,0 +1,9 @@
+
+%inner {
+    width: 100%;
+    max-width: $size_max;
+    @include under_middle {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+}

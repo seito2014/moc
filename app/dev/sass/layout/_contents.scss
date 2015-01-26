@@ -3,8 +3,7 @@
     margin: 30px 0;
 }
 .contents-inner{
-    width: 100%;
-    max-width: $size_max;
     margin: 0 auto;
     @extend %clearfix;
+    @extend %inner;
 }

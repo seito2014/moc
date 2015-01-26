@@ -2,8 +2,7 @@
     width: 100%;
     background: #333;
     &-inner {
-        width: 100%;
-        max-width: $size_max;
+        @extend %inner;
         height: 40px;
         margin: 0 auto;
         text-align: center;

@@ -458,6 +458,14 @@ body {
 .wrapper {
   width: 100%; }
 
+.header-inner, .footer-inner, .contents-inner {
+  width: 100%;
+  max-width: 1100px; }
+  @media all and (max-width: 1100px) {
+    .header-inner, .footer-inner, .contents-inner {
+      padding-right: 15px !important;
+      padding-left: 15px !important; } }
+
 /*
 * layout
 */
@@ -465,8 +473,6 @@ body {
   width: 100%;
   background: #eee; }
   .header-inner {
-    width: 100%;
-    max-width: 1100px;
     height: 80px;
     margin: 0 auto;
     padding: 10px;
@@ -482,12 +488,23 @@ body {
     font-size: 20px;
     letter-spacing: 2px;
     background: #fff; }
-  .header-module {
+  .header-sns {
     float: right;
-    width: 150px;
+    display: block;
+    width: 60px;
     height: 60px;
-    background: #fff;
-    margin-left: 10px; }
+    line-height: 60px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    text-align: center; }
+    .header-sns.facebook {
+      background-color: #3b579d; }
+    .header-sns.twitter {
+      background-color: #2CA7E0; }
+    .header-sns.google {
+      background-color: #DC4A36; }
 
 .nav {
   width: 100%;
@@ -517,8 +534,6 @@ body {
   width: 100%;
   background: #333; }
   .footer-inner {
-    width: 100%;
-    max-width: 1100px;
     height: 40px;
     margin: 0 auto;
     text-align: center;
@@ -535,24 +550,31 @@ body {
   margin: 30px 0; }
 
 .contents-inner {
-  width: 100%;
-  max-width: 1100px;
   margin: 0 auto; }
 
 .main {
   float: left;
-  width: 70%;
+  width: 770px;
   background: #eee;
   padding: 15px; }
+  @media all and (max-width: 1100px) {
+    .main {
+      float: static;
+      width: 100%; } }
 
 .side {
   float: right;
-  width: 27%;
+  width: 300px;
   background: #eee;
   padding: 15px; }
   .side .button-default {
     margin-top: 15px;
     width: 100%; }
+  @media all and (max-width: 1100px) {
+    .side {
+      float: static;
+      width: 100%;
+      margin-top: 30px; } }
 
 /*
 * module
@@ -843,11 +865,11 @@ type
   padding-top: 30px; }
 
 .main-visual {
-  width: 100%;
-  margin-top: 30px; }
+  width: 100%; }
 
 .main-visual-inner {
-  width: 1100px;
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto; }
   .main-visual-inner > img {
     width: 100%;

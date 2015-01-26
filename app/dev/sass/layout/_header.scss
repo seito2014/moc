@@ -2,8 +2,7 @@
     width: 100%;
     background: #eee;
     &-inner {
-        width: 100%;
-        max-width: $size_max;
+        @extend %inner;
         height: 80px;
         margin: 0 auto;
         padding: 10px;
@@ -22,11 +21,25 @@
         letter-spacing: 2px;
         background: #fff;
     }
-    &-module {
+    &-sns {
         float: right;
-        width: 150px;
+        display: block;
+        width: 60px;
         height: 60px;
-        background: #fff;
+        line-height: 60px;
         margin-left: 10px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        &.facebook{
+            background-color: #3b579d;
+        }
+        &.twitter{
+            background-color: #2CA7E0;
+        }
+        &.google{
+            background-color: #DC4A36;
+        }
     }
 }

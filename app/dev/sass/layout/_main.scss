@@ -1,6 +1,10 @@
 .main{
     float: left;
-    width: 70%;
+    width: 770px;
     background: #eee;
     padding: 15px;
+    @include under_middle{
+        float: static;
+        width: 100%;
+    }
 }

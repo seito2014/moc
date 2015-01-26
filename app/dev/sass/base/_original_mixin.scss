@@ -1,0 +1,18 @@
+
+@mixin middle{
+    @media (min-width: $size_min) and (max-width: $size_max) {
+        @content;
+    }
+}
+
+@mixin small{
+    @media all and (max-width: $size_min) {
+        @content;
+    }
+}
+
+@mixin under_middle{
+    @media all and (max-width: $size_max) {
+        @content;
+    }
+}

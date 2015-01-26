@@ -32,6 +32,10 @@
 
     @include small{
         display: none;
+        position: fixed;
+        height: 100%;
+        top: 50px;
+        left: 0;
         .nav-inner{
             display: block;
         }

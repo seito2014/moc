@@ -2,17 +2,27 @@
 
     'use strict';
 
-    var SPEED = 350;
+    var SPEED = 350,
+        SITE_MIN_WIDTH = 640;
 
-    var $trigger = $('#js-trigger'),
+    var $window = $(window),
+        $trigger = $('#js-trigger'),
         $wrapper = $('#js-wrapper'),
         $nav = $('#js-nav');
 
-    var scrollAllow = true;
+    var scrollAllow = true,
+        resizeTimer;
+
+    function navCloseEvent(){
+        $trigger.removeClass('is-active');
+        $wrapper.fadeIn(SPEED);
+        $nav.fadeOut(SPEED);
+        scrollAllow = true;
+    }
 
     // ローディング、curtain表示中はスクロールさせない
     function noScroll() {
-        $(window).on('mousewheel touchmove', function (e) {
+        $window.on('mousewheel touchmove', function (e) {
             if (scrollAllow === false) {
                 e.preventDefault();
             }
@@ -29,19 +39,24 @@
             $nav.fadeIn(SPEED);
             scrollAllow = false;
         } else {
-            $trigger.removeClass('is-active');
-            $wrapper.fadeIn(SPEED);
-            $nav.fadeOut(SPEED);
-            scrollAllow = true;
+            navCloseEvent();
         }
     });
 
     //nav close button
     $('#js-close').on('click',function(){
-        $trigger.removeClass('is-active');
-        $wrapper.fadeIn(SPEED);
-        $nav.fadeOut(SPEED);
-        scrollAllow = false;
+        navCloseEvent();
+    });
+
+    $window.on('resize',function(){
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function(){
+
+        if($window.width() > SITE_MIN_WIDTH && !$wrapper.is(':visible')) {
+            scrollAllow = true;
+            $wrapper.fadeIn(SPEED);
+        }
+        },16);
     });
 
 })();

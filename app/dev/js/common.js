@@ -8,6 +8,18 @@
         $wrapper = $('#js-wrapper'),
         $nav = $('#js-nav');
 
+    var scrollAllow = true;
+
+    // ローディング、curtain表示中はスクロールさせない
+    function noScroll() {
+        $(window).on('mousewheel touchmove', function (e) {
+            if (scrollAllow === false) {
+                e.preventDefault();
+            }
+        });
+    }
+    noScroll();
+
     //header nav button
     $trigger.on('click',function(){
 
@@ -15,10 +27,12 @@
             $trigger.addClass('is-active');
             $wrapper.fadeOut(SPEED);
             $nav.fadeIn(SPEED);
+            scrollAllow = false;
         } else {
             $trigger.removeClass('is-active');
             $wrapper.fadeIn(SPEED);
             $nav.fadeOut(SPEED);
+            scrollAllow = true;
         }
     });
 
@@ -27,6 +41,7 @@
         $trigger.removeClass('is-active');
         $wrapper.fadeIn(SPEED);
         $nav.fadeOut(SPEED);
+        scrollAllow = false;
     });
 
 })();
